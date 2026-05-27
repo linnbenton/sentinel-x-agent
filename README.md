@@ -2,7 +2,7 @@
 
 An autonomous multi-agent security intelligence platform built for the new era of agentic infrastructure on Solana.
 
-Sentinel-X Agent combines AI orchestration, structured threat analysis, autonomous execution flows, and decentralized coordination into a modular security operations framework designed for the [**OOBE × Ace Data Cloud Autonomous Agent Bounty**](https://superteam.fun/earn/listing/autonomous-agent-bounty-oobe-ace-data-cloud).
+<kbd>Sentinel-X Agent combines AI orchestration, structured threat analysis, autonomous execution flows, and decentralized coordination into a modular security operations framework designed for the [**OOBE × Ace Data Cloud Autonomous Agent Bounty**](https://superteam.fun/earn/listing/autonomous-agent-bounty-oobe-ace-data-cloud).</kbd>
 
 Inspired by the rise of autonomous on-chain agents, the system demonstrates how AI agents can independently analyze events, coordinate actions, enforce security workflows, and generate verifiable outputs in real time. The architecture follows a deterministic multi-agent pipeline focused on reliability, observability, and scalable execution.
 

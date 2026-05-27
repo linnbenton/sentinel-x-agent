@@ -5,15 +5,5 @@
       "path": "/api/agent",
       "schedule": "0 0 * * *"
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/api/agent",
-      "destination": "/api/agent.js"
-    }
   ]
 }

@@ -364,6 +364,661 @@
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
       }
 
+      /* ================= EXPLAINABILITY PANEL ================= */
+
+      .explain-panel {
+        margin-bottom: 25px;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(153, 69, 255, 0.22);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .explain-header {
+        background: rgba(153, 69, 255, 0.05);
+        border-bottom: 1px solid rgba(153, 69, 255, 0.15);
+        padding: 12px 18px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: var(--solana-purple);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .explain-content {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 20px;
+      }
+
+      .reason-box,
+      .decision-box {
+        background: rgba(5, 5, 15, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 18px;
+      }
+
+      .explain-title {
+        color: var(--solana-green);
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .reason-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .reason-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+      }
+
+      .reason-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--solana-green);
+        box-shadow: 0 0 10px var(--solana-green);
+      }
+
+      .reason-text {
+        color: #e2e8f0;
+        font-size: 0.85rem;
+        line-height: 1.4;
+      }
+
+      .decision-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .decision-line {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+        font-size: 0.85rem;
+      }
+
+      .decision-line:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .decision-key {
+        color: var(--text-secondary);
+      }
+
+      .decision-value {
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      .decision-value.green {
+        color: var(--solana-green);
+      }
+
+      .decision-value.purple {
+        color: var(--solana-purple);
+      }
+
+      @media (max-width: 850px) {
+        .explain-content {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ================= RECOVERY ENGINE PANEL ================= */
+
+      .recovery-panel {
+        margin-bottom: 25px;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 80, 80, 0.18);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .recovery-header {
+        background: rgba(255, 80, 80, 0.05);
+        border-bottom: 1px solid rgba(255, 80, 80, 0.12);
+        padding: 12px 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #ff8a8a;
+        font-size: 0.9rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .recovery-content {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 20px;
+      }
+
+      .recovery-box,
+      .recovery-status-box {
+        background: rgba(5, 5, 15, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 18px;
+      }
+
+      .recovery-title {
+        color: #ff8a8a;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .recovery-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .recovery-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+      }
+
+      .recovery-icon {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 80, 80, 0.08);
+        border: 1px solid rgba(255, 80, 80, 0.18);
+        color: #ff8a8a;
+        font-size: 0.75rem;
+        font-weight: bold;
+      }
+
+      .recovery-text {
+        color: #e5e7eb;
+        font-size: 0.85rem;
+        line-height: 1.4;
+      }
+
+      .status-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .status-line {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+        font-size: 0.85rem;
+      }
+
+      .status-line:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .status-key {
+        color: var(--text-secondary);
+      }
+
+      .status-value {
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      .status-value.red {
+        color: #ff8a8a;
+      }
+
+      .status-value.green {
+        color: var(--solana-green);
+      }
+
+      @media (max-width: 850px) {
+        .recovery-content {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ================= HEARTBEAT PANEL ================= */
+
+      .heartbeat-panel {
+        margin-bottom: 25px;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(0, 255, 204, 0.18);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .heartbeat-header {
+        background: rgba(0, 255, 204, 0.05);
+        border-bottom: 1px solid rgba(0, 255, 204, 0.12);
+        padding: 12px 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--solana-green);
+        font-size: 0.9rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .heartbeat-content {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 20px;
+      }
+
+      .heartbeat-box,
+      .heartbeat-status-box {
+        background: rgba(5, 5, 15, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 18px;
+      }
+
+      .heartbeat-title {
+        color: var(--solana-green);
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .heartbeat-live {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        color: #ffffff;
+        font-size: 0.9rem;
+      }
+
+      .heartbeat-pulse {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--solana-green);
+        box-shadow: 0 0 12px var(--solana-green);
+        animation: pulse 1.5s infinite ease-in-out;
+      }
+
+      .heartbeat-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .heartbeat-line {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+        font-size: 0.85rem;
+      }
+
+      .heartbeat-line:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .heartbeat-key {
+        color: var(--text-secondary);
+      }
+
+      .heartbeat-value {
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      .heartbeat-value.green {
+        color: var(--solana-green);
+      }
+
+      .heartbeat-value.purple {
+        color: var(--solana-purple);
+      }
+
+      .heartbeat-endpoint {
+        background: rgba(0, 0, 0, 0.45);
+        border: 1px solid rgba(0, 255, 204, 0.08);
+        border-radius: 6px;
+        padding: 14px;
+        font-size: 0.8rem;
+        line-height: 1.7;
+        color: #d1d5db;
+        overflow-x: auto;
+      }
+
+      .heartbeat-endpoint span {
+        color: var(--solana-green);
+      }
+
+      @media (max-width: 850px) {
+        .heartbeat-content {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ================= STATE MACHINE PANEL ================= */
+
+      .state-machine-panel {
+        margin-bottom: 25px;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(153, 69, 255, 0.18);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .state-machine-header {
+        background: rgba(153, 69, 255, 0.05);
+        border-bottom: 1px solid rgba(153, 69, 255, 0.12);
+        padding: 12px 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--solana-purple);
+        font-size: 0.9rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .state-machine-content {
+        padding: 24px;
+      }
+
+      .state-flow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .state-node {
+        min-width: 120px;
+        padding: 14px 18px;
+        border-radius: 8px;
+        text-align: center;
+        background: rgba(5, 5, 15, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        position: relative;
+        transition: 0.25s ease;
+      }
+
+      .state-node:hover {
+        transform: translateY(-2px);
+      }
+
+      .state-node.active {
+        border-color: rgba(0, 255, 204, 0.35);
+        box-shadow:
+          0 0 18px rgba(0, 255, 204, 0.12),
+          inset 0 0 12px rgba(0, 255, 204, 0.04);
+      }
+
+      .state-node.completed {
+        border-color: rgba(153, 69, 255, 0.28);
+        box-shadow:
+          0 0 16px rgba(153, 69, 255, 0.1),
+          inset 0 0 10px rgba(153, 69, 255, 0.03);
+      }
+
+      .state-label {
+        font-size: 0.72rem;
+        color: var(--text-secondary);
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+      }
+
+      .state-name {
+        color: #ffffff;
+        font-size: 0.9rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .state-arrow {
+        color: var(--solana-green);
+        font-size: 1.1rem;
+        opacity: 0.8;
+      }
+
+      .state-status {
+        margin-top: 8px;
+        font-size: 0.7rem;
+        color: var(--solana-green);
+        letter-spacing: 1px;
+      }
+
+      .state-runtime-meta {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+      }
+
+      .runtime-box {
+        background: rgba(5, 5, 15, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 16px;
+      }
+
+      .runtime-title {
+        color: var(--text-secondary);
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+      }
+
+      .runtime-value {
+        color: #ffffff;
+        font-size: 0.95rem;
+        font-weight: bold;
+      }
+
+      .runtime-value.green {
+        color: var(--solana-green);
+      }
+
+      .runtime-value.purple {
+        color: var(--solana-purple);
+      }
+
+      @media (max-width: 950px) {
+        .state-runtime-meta {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .state-flow {
+          flex-direction: column;
+        }
+
+        .state-arrow {
+          transform: rotate(90deg);
+        }
+
+        .state-node {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .state-runtime-meta {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ================= VERIFIABLE PAYLOAD PANEL ================= */
+
+      .payload-panel {
+        margin-bottom: 25px;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(0, 255, 204, 0.18);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .payload-header {
+        background: rgba(0, 255, 204, 0.05);
+        border-bottom: 1px solid rgba(0, 255, 204, 0.12);
+        padding: 12px 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--solana-green);
+        font-size: 0.9rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .payload-content {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 20px;
+      }
+
+      .payload-box,
+      .verification-box {
+        background: rgba(5, 5, 15, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 18px;
+      }
+
+      .payload-title {
+        color: var(--solana-green);
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .hash-block {
+        background: rgba(0, 0, 0, 0.45);
+        border: 1px solid rgba(0, 255, 204, 0.08);
+        border-radius: 6px;
+        padding: 14px;
+        margin-bottom: 14px;
+        overflow-x: auto;
+      }
+
+      .hash-label {
+        color: var(--text-secondary);
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+      }
+
+      .hash-value {
+        color: var(--solana-green);
+        font-size: 0.82rem;
+        word-break: break-all;
+        line-height: 1.6;
+      }
+
+      .verification-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .verification-line {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+        font-size: 0.85rem;
+      }
+
+      .verification-line:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .verification-key {
+        color: var(--text-secondary);
+      }
+
+      .verification-value {
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      .verification-value.green {
+        color: var(--solana-green);
+      }
+
+      .verification-value.purple {
+        color: var(--solana-purple);
+      }
+
+      .signature-status {
+        margin-top: 18px;
+        padding: 12px;
+        border-radius: 6px;
+        background: rgba(0, 255, 204, 0.05);
+        border: 1px solid rgba(0, 255, 204, 0.15);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .signature-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--solana-green);
+        box-shadow: 0 0 12px var(--solana-green);
+        animation: pulse 1.5s infinite ease-in-out;
+      }
+
+      .signature-text {
+        color: #ffffff;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+      }
+
+      @media (max-width: 850px) {
+        .payload-content {
+          grid-template-columns: 1fr;
+        }
+      }
+
       .compliance-footer {
         background: rgba(153, 69, 255, 0.03);
         border: 1px dashed rgba(153, 69, 255, 0.4);
@@ -566,6 +1221,630 @@
                 <span style="color: #ffffff; font-size: 0.65rem"
                   >GENERATION VIA ACE API [ACTIVE]</span
                 >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= EXECUTION TRACE PANEL ================= -->
+
+      <style>
+        .execution-trace-panel {
+          margin-bottom: 25px;
+          background: rgba(0, 0, 0, 0.4);
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          overflow: hidden;
+        }
+
+        .trace-panel-header {
+          background: rgba(153, 69, 255, 0.06);
+          border-bottom: 1px solid rgba(153, 69, 255, 0.2);
+          padding: 12px 18px;
+          font-size: 0.9rem;
+          font-weight: bold;
+          letter-spacing: 1px;
+          color: var(--solana-purple);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .trace-panel-content {
+          padding: 20px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+        }
+
+        .trace-box {
+          background: rgba(5, 5, 15, 0.55);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          border-radius: 8px;
+          padding: 18px;
+        }
+
+        .trace-box-title {
+          color: var(--solana-green);
+          font-size: 0.8rem;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-bottom: 16px;
+        }
+
+        .trace-meta {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .trace-meta-line {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+          padding-bottom: 8px;
+          border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+          font-size: 0.85rem;
+        }
+
+        .trace-meta-line:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        .trace-key {
+          color: var(--text-secondary);
+        }
+
+        .trace-value {
+          color: #ffffff;
+          font-weight: bold;
+        }
+
+        .trace-value.green {
+          color: var(--solana-green);
+        }
+
+        .trace-value.purple {
+          color: var(--solana-purple);
+        }
+
+        .agent-trace-list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .agent-step {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 10px 12px;
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.04);
+          border-radius: 6px;
+          transition: 0.2s ease;
+        }
+
+        .agent-step:hover {
+          border-color: rgba(0, 255, 204, 0.15);
+          transform: translateX(3px);
+        }
+
+        .step-index {
+          min-width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background: rgba(0, 255, 204, 0.08);
+          border: 1px solid rgba(0, 255, 204, 0.2);
+          color: var(--solana-green);
+          font-size: 0.75rem;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .step-name {
+          color: #e2e8f0;
+          font-size: 0.85rem;
+          letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 850px) {
+          .trace-panel-content {
+            grid-template-columns: 1fr;
+          }
+        }
+      </style>
+
+      <div class="execution-trace-panel">
+        <div class="trace-panel-header">
+          <span>EXECUTION TRACE // AUTONOMOUS RUNTIME AUDIT</span>
+          <span style="color: var(--text-secondary); font-size: 0.75rem">
+            TRACE CORE
+          </span>
+        </div>
+
+        <div class="trace-panel-content">
+          <!-- LEFT -->
+          <div class="trace-box">
+            <div class="trace-box-title">EXECUTION METADATA</div>
+
+            <div class="trace-meta">
+              <div class="trace-meta-line">
+                <span class="trace-key">EXECUTION ID</span>
+                <span class="trace-value green"> SXA-2026-00452 </span>
+              </div>
+
+              <div class="trace-meta-line">
+                <span class="trace-key">STATE</span>
+                <span class="trace-value"> COMPLETED </span>
+              </div>
+
+              <div class="trace-meta-line">
+                <span class="trace-key">START</span>
+                <span class="trace-value"> 23:45:01 UTC </span>
+              </div>
+
+              <div class="trace-meta-line">
+                <span class="trace-key">END</span>
+                <span class="trace-value"> 23:45:25 UTC </span>
+              </div>
+
+              <div class="trace-meta-line">
+                <span class="trace-key">DURATION</span>
+                <span class="trace-value purple"> 24s </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="trace-box">
+            <div class="trace-box-title">AGENT TRACE</div>
+
+            <div class="agent-trace-list">
+              <div class="agent-step">
+                <div class="step-index">1</div>
+                <div class="step-name">Threat Scanner</div>
+              </div>
+
+              <div class="agent-step">
+                <div class="step-index">2</div>
+                <div class="step-name">ACE Cloud Query</div>
+              </div>
+
+              <div class="agent-step">
+                <div class="step-index">3</div>
+                <div class="step-name">Payload Sanitizer</div>
+              </div>
+
+              <div class="agent-step">
+                <div class="step-index">4</div>
+                <div class="step-name">Synapse Broadcaster</div>
+              </div>
+
+              <div class="agent-step">
+                <div class="step-index">5</div>
+                <div class="step-name">RPC Verification</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= DECISION EXPLAINABILITY ================= -->
+
+      <div class="explain-panel">
+        <div class="explain-header">
+          <span>WHY ACTION WAS EXECUTED // DECISION EXPLAINABILITY</span>
+          <span style="color: var(--text-secondary); font-size: 0.75rem">
+            AI REASONING
+          </span>
+        </div>
+
+        <div class="explain-content">
+          <!-- LEFT -->
+
+          <div class="reason-box">
+            <div class="explain-title">EXECUTION REASONS</div>
+
+            <div class="reason-list">
+              <div class="reason-item">
+                <div class="reason-dot"></div>
+                <div class="reason-text">
+                  Trend score exceeded autonomous execution threshold
+                </div>
+              </div>
+
+              <div class="reason-item">
+                <div class="reason-dot"></div>
+                <div class="reason-text">
+                  Viral propagation probability reached 92%
+                </div>
+              </div>
+
+              <div class="reason-item">
+                <div class="reason-dot"></div>
+                <div class="reason-text">
+                  Safety validation pipeline returned PASS state
+                </div>
+              </div>
+
+              <div class="reason-item">
+                <div class="reason-dot"></div>
+                <div class="reason-text">
+                  x402 quota allocation available for runtime cycle
+                </div>
+              </div>
+
+              <div class="reason-item">
+                <div class="reason-dot"></div>
+                <div class="reason-text">
+                  Synapse RPC route integrity verified successfully
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="decision-box">
+            <div class="explain-title">DECISION METRICS</div>
+
+            <div class="decision-grid">
+              <div class="decision-line">
+                <span class="decision-key">TREND SCORE</span>
+                <span class="decision-value green"> 94 / 100 </span>
+              </div>
+
+              <div class="decision-line">
+                <span class="decision-key">VIRAL PROBABILITY</span>
+                <span class="decision-value purple"> 92% </span>
+              </div>
+
+              <div class="decision-line">
+                <span class="decision-key">SAFETY VALIDATION</span>
+                <span class="decision-value green"> PASS </span>
+              </div>
+
+              <div class="decision-line">
+                <span class="decision-key">RPC ROUTE</span>
+                <span class="decision-value green"> VERIFIED </span>
+              </div>
+
+              <div class="decision-line">
+                <span class="decision-key">EXECUTION CONFIDENCE</span>
+                <span class="decision-value"> HIGH </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= AUTO RECOVERY ENGINE ================= -->
+
+      <div class="recovery-panel">
+        <div class="recovery-header">
+          <span>AUTO-RECOVERY ENGINE // FAILURE HANDLING</span>
+          <span style="color: var(--text-secondary); font-size: 0.75rem">
+            SELF-HEALING CORE
+          </span>
+        </div>
+
+        <div class="recovery-content">
+          <!-- LEFT -->
+
+          <div class="recovery-box">
+            <div class="recovery-title">FAILURE RECOVERY PIPELINE</div>
+
+            <div class="recovery-list">
+              <div class="recovery-item">
+                <div class="recovery-icon">01</div>
+                <div class="recovery-text">
+                  Automatic retry sequence for failed RPC execution routes
+                </div>
+              </div>
+
+              <div class="recovery-item">
+                <div class="recovery-icon">02</div>
+                <div class="recovery-text">
+                  Malformed payload detection and sanitization checkpoint
+                </div>
+              </div>
+
+              <div class="recovery-item">
+                <div class="recovery-icon">03</div>
+                <div class="recovery-text">
+                  Autonomous reconstruction of corrupted execution states
+                </div>
+              </div>
+
+              <div class="recovery-item">
+                <div class="recovery-icon">04</div>
+                <div class="recovery-text">
+                  Emergency rollback system for invalid runtime propagation
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="recovery-status-box">
+            <div class="recovery-title">ENGINE STATUS</div>
+
+            <div class="status-grid">
+              <div class="status-line">
+                <span class="status-key">RPC RETRY ENGINE</span>
+                <span class="status-value green"> ACTIVE </span>
+              </div>
+
+              <div class="status-line">
+                <span class="status-key">PAYLOAD SANITIZER</span>
+                <span class="status-value green"> ENABLED </span>
+              </div>
+
+              <div class="status-line">
+                <span class="status-key">ROLLBACK PROTECTION</span>
+                <span class="status-value green"> READY </span>
+              </div>
+
+              <div class="status-line">
+                <span class="status-key">STATE RECOVERY</span>
+                <span class="status-value red"> MONITORING </span>
+              </div>
+
+              <div class="status-line">
+                <span class="status-key">FAILURE TOLERANCE</span>
+                <span class="status-value"> HIGH </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= HEARTBEAT SYSTEM ================= -->
+
+      <div class="heartbeat-panel">
+        <div class="heartbeat-header">
+          <span>HEARTBEAT STATUS // LIVE AGENT RUNTIME</span>
+          <span style="color: var(--text-secondary); font-size: 0.75rem">
+            ACTIVE NODE
+          </span>
+        </div>
+
+        <div class="heartbeat-content">
+          <!-- LEFT -->
+
+          <div class="heartbeat-box">
+            <div class="heartbeat-title">LIVE SYSTEM STATUS</div>
+
+            <div class="heartbeat-live">
+              <div class="heartbeat-pulse"></div>
+              Sentinel-X Autonomous Runtime Operational
+            </div>
+
+            <div class="heartbeat-grid">
+              <div class="heartbeat-line">
+                <span class="heartbeat-key">STATUS</span>
+                <span class="heartbeat-value green"> ONLINE </span>
+              </div>
+
+              <div class="heartbeat-line">
+                <span class="heartbeat-key">LAST EXECUTION</span>
+                <span class="heartbeat-value"> 2m ago </span>
+              </div>
+
+              <div class="heartbeat-line">
+                <span class="heartbeat-key">ACTIVE AGENTS</span>
+                <span class="heartbeat-value purple"> 4 </span>
+              </div>
+
+              <div class="heartbeat-line">
+                <span class="heartbeat-key">QUEUE HEALTH</span>
+                <span class="heartbeat-value green"> STABLE </span>
+              </div>
+
+              <div class="heartbeat-line">
+                <span class="heartbeat-key">RUNTIME MODE</span>
+                <span class="heartbeat-value"> AUTONOMOUS </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="heartbeat-status-box">
+            <div class="heartbeat-title">API HEARTBEAT ENDPOINT</div>
+
+            <div class="heartbeat-endpoint">
+              <pre>
+{
+  "<span>status</span>": "ok",
+  "<span>agent</span>": "sentinel-x",
+  "<span>uptime</span>": "99.9%",
+  "<span>lastCycle</span>": "2026-05-27T23:45:01Z"
+}</pre
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= REAL STATE MACHINE ================= -->
+
+      <div class="state-machine-panel">
+        <div class="state-machine-header">
+          <span>REAL STATE MACHINE // AUTONOMOUS EXECUTION FLOW</span>
+          <span style="color: var(--text-secondary); font-size: 0.75rem">
+            DETERMINISTIC PIPELINE
+          </span>
+        </div>
+
+        <div class="state-machine-content">
+          <div class="state-flow">
+            <div class="state-node completed">
+              <div class="state-label">STATE 01</div>
+              <div class="state-name">IDLE</div>
+              <div class="state-status">COMPLETED</div>
+            </div>
+
+            <div class="state-arrow">➜</div>
+
+            <div class="state-node completed">
+              <div class="state-label">STATE 02</div>
+              <div class="state-name">SCANNING</div>
+              <div class="state-status">COMPLETED</div>
+            </div>
+
+            <div class="state-arrow">➜</div>
+
+            <div class="state-node completed">
+              <div class="state-label">STATE 03</div>
+              <div class="state-name">ANALYZING</div>
+              <div class="state-status">COMPLETED</div>
+            </div>
+
+            <div class="state-arrow">➜</div>
+
+            <div class="state-node completed">
+              <div class="state-label">STATE 04</div>
+              <div class="state-name">VALIDATING</div>
+              <div class="state-status">COMPLETED</div>
+            </div>
+
+            <div class="state-arrow">➜</div>
+
+            <div class="state-node active">
+              <div class="state-label">STATE 05</div>
+              <div class="state-name">EXECUTING</div>
+              <div class="state-status">ACTIVE</div>
+            </div>
+
+            <div class="state-arrow">➜</div>
+
+            <div class="state-node">
+              <div class="state-label">STATE 06</div>
+              <div class="state-name">VERIFYING</div>
+            </div>
+
+            <div class="state-arrow">➜</div>
+
+            <div class="state-node">
+              <div class="state-label">STATE 07</div>
+              <div class="state-name">ARCHIVING</div>
+            </div>
+
+            <div class="state-arrow">➜</div>
+
+            <div class="state-node">
+              <div class="state-label">STATE 08</div>
+              <div class="state-name">SLEEP</div>
+            </div>
+          </div>
+
+          <div class="state-runtime-meta">
+            <div class="runtime-box">
+              <div class="runtime-title">CURRENT STATE</div>
+              <div class="runtime-value green">EXECUTING</div>
+            </div>
+
+            <div class="runtime-box">
+              <div class="runtime-title">TRANSITION MODE</div>
+              <div class="runtime-value">DETERMINISTIC</div>
+            </div>
+
+            <div class="runtime-box">
+              <div class="runtime-title">ACTIVE PIPELINES</div>
+              <div class="runtime-value purple">4</div>
+            </div>
+
+            <div class="runtime-box">
+              <div class="runtime-title">STATE INTEGRITY</div>
+              <div class="runtime-value green">VERIFIED</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VERIFIABLE PAYLOADS ================= -->
+
+      <div class="payload-panel">
+        <div class="payload-header">
+          <span>VERIFIABLE PAYLOADS // CRYPTOGRAPHIC VALIDATION</span>
+          <span style="color: var(--text-secondary); font-size: 0.75rem">
+            SECURE RUNTIME
+          </span>
+        </div>
+
+        <div class="payload-content">
+          <!-- LEFT -->
+
+          <div class="payload-box">
+            <div class="payload-title">PAYLOAD VERIFICATION</div>
+
+            <div class="hash-block">
+              <div class="hash-label">PAYLOAD HASH</div>
+
+              <div class="hash-value">
+                0x8f2a91d7bcf4450ea12c77af91f0aa4d34e6a991c7efbb22c42a19a0f6dd881a
+              </div>
+            </div>
+
+            <div class="hash-block">
+              <div class="hash-label">ENCRYPTED EXECUTION SIGNATURE</div>
+
+              <div class="hash-value">
+                SXA_SIG_v2_77A91BC_X402_RPC_SYNAPSE_VERIFIED
+              </div>
+            </div>
+
+            <div class="signature-status">
+              <div class="signature-dot"></div>
+
+              <div class="signature-text">
+                SIGNATURE STATUS VERIFIED — Autonomous payload integrity
+                confirmed
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="verification-box">
+            <div class="payload-title">VERIFICATION METADATA</div>
+
+            <div class="verification-grid">
+              <div class="verification-line">
+                <span class="verification-key"> SIGNATURE STATUS </span>
+
+                <span class="verification-value green"> VERIFIED </span>
+              </div>
+
+              <div class="verification-line">
+                <span class="verification-key"> PAYLOAD ENCRYPTION </span>
+
+                <span class="verification-value"> AES-256 </span>
+              </div>
+
+              <div class="verification-line">
+                <span class="verification-key"> x402 ROUTE </span>
+
+                <span class="verification-value purple"> ACTIVE </span>
+              </div>
+
+              <div class="verification-line">
+                <span class="verification-key"> RPC COMMITMENT </span>
+
+                <span class="verification-value green"> FINALIZED </span>
+              </div>
+
+              <div class="verification-line">
+                <span class="verification-key"> STATE INTEGRITY </span>
+
+                <span class="verification-value green"> VALID </span>
               </div>
             </div>
           </div>

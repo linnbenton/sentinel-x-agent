@@ -49,22 +49,30 @@ export async function generateContent(trend) {
 // API 3: Generating visual media using Image Generation API
 export async function generateMemeImage(content) {
   try {
+    // CLEANUP: Remove emojis and special characters from the LLM text to prevent API validation failures
+    const cleanPrompt = `Futuristic cyberpunk digital art showing: ${content.replace(/[^\w\s]/gi, "").substring(0, 150)}`;
+
     const response = await axios.post(
       `${config.aceData.baseUrl}/v1/images/generations`,
       {
-        prompt: `Cyberpunk futuristic illustration depicting: ${content.substring(0, 100)}`,
+        prompt: cleanPrompt,
+        n: 1,
         size: "1024x1024",
       },
       { headers: HEADERS },
     );
+
+    // DYNAMIC PARSING: Extract the image URL based on Ace Data Cloud's response payload structure
     return (
-      response.data.image_url ||
       response.data.data?.[0]?.url ||
+      response.data.image_url ||
       "https://via.placeholder.com/1024"
     );
   } catch (error) {
+    // DEBUGGING: Extract specific error messages from the server response for easier troubleshooting
+    const errorDetail = error.response?.data?.error?.message || error.message;
     console.error(
-      `❌ [Image API] Failed to generate meme asset: ${error.message}`,
+      `❌ [Image API] Failed to generate meme asset: ${errorDetail}`,
     );
     return "https://via.placeholder.com/1024";
   }

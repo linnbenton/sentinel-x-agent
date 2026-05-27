@@ -1,22 +1,19 @@
+// production-grade serverless agent for vercel runtime platform
 import axios from "axios";
 
 export default async function handler(request, response) {
-  // 1. Security Check: Allow Vercel Cron or local development testing
-  const authHeader =
-    request.headers.authorization ||
-    (request.headers.get ? request.headers.get("authorization") : null);
-  const cronSecret = process.env.CRON_SECRET;
+  // 1. Flexible Validation: Allow if local, if token matches, or if internally triggered by Vercel Cron
+  const authHeader = request.headers.authorization || "";
+  const isVercelInternal = request.headers["x-vercel-cron"] === "1"; // Automatic internal Vercel trigger detection
 
   if (
     process.env.VERCEL_ENV === "production" &&
-    authHeader !== `Bearer ${cronSecret}`
+    !isVercelInternal &&
+    authHeader !== `Bearer ${process.env.CRON_SECRET}`
   ) {
     return response
       .status(401)
-      .json({
-        success: false,
-        message: "Context verification failed. Unauthorized execution.",
-      });
+      .json({ success: false, message: "Unauthorized execution context." });
   }
 
   console.log("==================================================");

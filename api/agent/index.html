@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentinel-X Agent | Cyber-Intelligence Core</title>
+    <style>
+      body {
+        background-color: #0a0a12;
+        color: #00ffcc;
+        font-family: "Courier New", Courier, monospace;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+      }
+      .container {
+        text-align: center;
+        border: 2px solid #00ffcc;
+        padding: 40px;
+        background: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 30px rgba(0, 255, 204, 0.2);
+        border-radius: 8px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+      }
+      p {
+        color: #8892b0;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+      }
+      .status-pulse {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-color: #00ffcc;
+        border-radius: 50%;
+        margin-right: 8px;
+        box-shadow: 0 0 12px #00ffcc;
+        animation: pulse 1.5s infinite;
+      }
+      .status-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(0.9);
+          opacity: 0.6;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0.9);
+          opacity: 0.6;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🛡️ SENTINEL-X AGENT</h1>
+      <p>Autonomous Security Intelligence Infrastructure on Solana Network</p>
+      <div class="status-container">
+        <span class="status-pulse"></span>
+        <span>Core Core Operational // Stateful Loop Active</span>
+      </div>
+    </div>
+  </body>
+</html>

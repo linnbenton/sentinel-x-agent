@@ -1,4 +1,4 @@
-// production-grade serverless agent for vercel runtime platform
+// Production-grade serverless agent for Vercel runtime platform
 import axios from "axios";
 
 export default async function handler(request, response) {
@@ -32,7 +32,7 @@ export default async function handler(request, response) {
       );
     }
 
-    // STEP 1: Simulate Solana Trend Scanning
+    // STEP 1: Scan Network Narrative Trends
     console.log(
       "🔍 [1/4] Scanning live narrative telemetry on Solana Network...",
     );

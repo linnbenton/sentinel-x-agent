@@ -16,7 +16,6 @@
     "@oobe-protocol-labs/synapse-client-sdk": "github:OOBE-PROTOCOL/synapse-client-sdk",
     "@oobe-protocol-labs/synapse-sap-sdk": "github:OOBE-PROTOCOL/synapse-sap-sdk",
     "axios": "^1.16.1",
-    "dotenv": "^17.4.2",
-    "node-fetch": "^3.3.2"
+    "dotenv": "^17.4.2"
   }
 }

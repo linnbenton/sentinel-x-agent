@@ -35,7 +35,6 @@
         position: relative;
       }
 
-      /* Ambient Background Glow Grid */
       body::before {
         content: "";
         position: absolute;
@@ -50,7 +49,6 @@
         z-index: 1;
       }
 
-      /* Hologram scanlines overlay */
       body::after {
         content: " ";
         display: block;
@@ -65,7 +63,7 @@
             90deg,
             rgba(255, 0, 0, 0.06),
             rgba(0, 255, 0, 0.02),
-            rgba(0, 0, 255, 0.06)
+            rgba(0, 255, 0, 0.06)
           );
         z-index: 99;
         background-size:
@@ -88,7 +86,6 @@
         backdrop-filter: blur(10px);
       }
 
-      /* Header System Section */
       .header-section {
         display: flex;
         justify-content: space-between;
@@ -104,7 +101,6 @@
         gap: 20px;
       }
 
-      /* Solana Gradient Icon Wrapper */
       .solana-logo-wrapper {
         position: relative;
         width: 50px;
@@ -147,7 +143,6 @@
         gap: 3px;
       }
 
-      /* Iconic Solana Parallelograms */
       .sol-bar {
         width: 22px;
         height: 4px;
@@ -223,7 +218,6 @@
         box-shadow: 0 0 10px var(--solana-purple);
       }
 
-      /* Flow Visualization Graphic Diagram */
       .flow-diagram {
         border: 1px solid rgba(153, 69, 255, 0.15);
         background: rgba(5, 5, 15, 0.6);
@@ -266,7 +260,6 @@
         color: var(--solana-purple);
       }
 
-      /* Two-Column Grid Console Layout */
       .grid-container {
         display: grid;
         grid-template-columns: 2.2fr 1fr;
@@ -297,7 +290,6 @@
         padding: 20px;
       }
 
-      /* Log Stream Layout */
       .log-stream {
         display: flex;
         flex-direction: column;
@@ -326,7 +318,6 @@
         font-weight: bold;
       }
 
-      /* Media Box Container */
       .media-box {
         width: 100%;
         aspect-ratio: 1 / 1;
@@ -340,7 +331,6 @@
         align-items: center;
       }
 
-      /* Faux dynamic generative graphic via structural CSS layout */
       .media-graphic {
         position: absolute;
         width: 140%;
@@ -374,7 +364,6 @@
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
       }
 
-      /* Bottom Footprint Row Info */
       .compliance-footer {
         background: rgba(153, 69, 255, 0.03);
         border: 1px dashed rgba(153, 69, 255, 0.4);
@@ -555,7 +544,7 @@
                     >SLEEP:</span
                   >
                   Cron cycle completed successfully. System safe. Next routine
-                  run in 8 hours...
+                  run in 24 hours...
                 </div>
               </div>
             </div>
